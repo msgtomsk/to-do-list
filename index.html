@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <main class="to-do-list-wrap">
+        <!-- <h1 class="to-do-list-heading">TO DO LIST</h1> -->
+        <button class="to-do-list-start-btn ">
+            Your TO-Do List
+        </button>
+        <div class="add-new-task mr-hide">
+            <h4 class="add-new-task-head">Add a new Task</h4>
+            <div class="add-new-task-inp-wrp">
+                <div class="add-new-task-label">
+                    Add Task
+                </div>
+                <input class="add-new-task-input new-task-name" type="text" placeholder="What needs to be done?">
+                <div class="show-warning"></div>
+            </div>
+            <div class="add-new-task-inp-wrp">
+                <div class="add-new-task-label">Description </div>
+                <input class="add-new-task-input new-task-desc" type="text" placeholder="Describe your task">
+                <div class="show-warning"></div>
+            </div>
+            <div class="time-date-wrp">
+                <div class="add-new-task-inp-wrp">
+                    <div class="add-new-task-label">Date </div>
+                    <input class="add-new-task-input new-task-date" type="date" placeholder="dd/mm/yyyy">
+                    <div class="show-warning"></div>
+                </div>
+                <div class="add-new-task-inp-wrp">
+                    <div class="add-new-task-label">Time </div>
+                    <input class="add-new-task-input new-task-time" type="time" placeholder="hr:min:AM/PM">
+                    <div class="show-warning"></div>
+                </div>
+            </div>
+            <div class="add-new-task-btn-wrp">
+                <div class="radiobox-cont">
+                    <input class="radio-btn-ref" type="radio" name="type" value="Personal" checked>
+                    <span>Personal</span>
+                    <input type="radio" name="type" value="Business">
+                    <span>Business</span>
+                    <input type="radio" name="type" value="Others">
+                    <span>Others</span>
+                </div>
+                <button class="save-btn">Save</button>
+            </div>
+        </div>
+
+        <div class="view-task-wrp mr-hide">
+            <button class="add-btn">Add New</button>
+            <div class="view-task-search-wrp">
+                <select name="category-dropdown" class="category-dropdown" id="">
+                    <option value="all">All</option>
+                    <option value="personal">Personal</option>
+                    <option value="business">Business</option>
+                    <option value="others">Others</option>
+                </select>
+                <div class="search-bar-cont">
+                    <input class="search-bar" type="text" placeholder="Search by task name">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <h4 class="view-task-head">Tasks</h4>
+            <div class="task-list">
+                <!-- <div class="task-wrp">
+                    <div class="task-log">T</div>
+                    <div class="task-content-wrp">
+                        <div class="ind-task-head">Task head</div>
+                        <div class="ind-task-desc">Task description</div>
+                    </div>
+                    <div class="time-remains">3 hrs</div>
+                </div> -->
+            </div>
+            <div class="task-status-cnt">
+                <div class="task-count">1 items</div>
+                <div class="task-filter-btn-wrp">
+                    <button class="task-status-btn btn-clicked">All</button>
+                    <button class="task-status-btn">Completed</button>
+                    <button class="task-status-btn">Active</button>
+                    <button class="task-status-btn">Clear Completed</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

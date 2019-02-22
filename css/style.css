@@ -1,0 +1,351 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mr-hide {
+    display: none !important;
+}
+
+.to-do-list-wrap {
+    background-color: rgb(50, 205, 50);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .to-do-list-wrap .to-do-list-heading {
+    font-family: Opensans-ExtraBold;
+    color: #ffffff;
+    font-size: 20px;
+} */
+
+/* button style */
+
+.to-do-list-start-btn {
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 10px 10px 10px 18px;
+    border: none;
+    color: #ccc;
+    font-family: Opensans-SemiBold;
+    font-size: 20px;
+}
+
+.to-do-list-start-btn::after {
+    content: '+';
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(50, 205, 50);
+    border-radius: 50%;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+/* button style ends*/
+
+/* new task style */
+
+.add-new-task {
+    width: 40%;
+    padding: 20px 35px;
+    font-family: Opensans-Regular;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.add-new-task-head {
+    text-align: center;
+    font-family: Opensans-SemiBold;
+    font-size: 18px;
+    color: #ccc;
+}
+
+.add-new-task-inp-wrp {
+    font-family: OpenSans-Regular;
+    font-size: 16px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.add-new-task-label {
+    color: rgb(50, 205, 50);
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.add-new-task-input {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 22px;
+    text-align: left;
+}
+
+.time-date-wrp,
+.add-new-task-btn-wrp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-new-task-btn-wrp {
+    margin-top: 30px;
+}
+
+.radiobox-cont {
+    display: flex;
+    align-items: center;
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.radiobox-cont span {
+    margin: 0 10px 0 5px;
+}
+
+.save-btn {
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(50, 205, 50);
+    color: #ffffff;
+    font-family: OpenSans-Regular;
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+/* new task style ends*/
+
+/* view task */
+
+.add-btn {
+    position: absolute;
+    border: 1px solid #ffffff;
+    background-color: rgb(50, 205, 50);
+    border-radius: 25px;
+    font-family: Opensans-SemiBold;
+    font-size: 12px;
+    padding: 6px 10px;
+    top: -40px;
+    right: 0px;
+    color: #ffffff;
+}
+
+.view-task-wrp {
+    background-color: #ffffff;
+    padding: 20px 35px;
+    border-radius: 8px;
+    width: 50%;
+    position: relative;
+}
+
+.view-task-search-wrp {
+    display: flex;
+    justify-content: space-between;
+}
+
+.category-dropdown,
+.search-bar {
+    font-family: OpenSans-Regular;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.category-dropdown {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 20%;
+}
+
+.search-bar {
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+}
+
+.view-task-head {
+    margin-top: 20px;
+    font-family: Opensans-SemiBold;
+    color: rgb(50, 205, 50);
+    font-size: 18px;
+    text-align: left;
+}
+
+.task-wrp {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+    width: 99%;
+}
+
+.task-log {
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    height: 30px;
+    width: 30px;
+    font-family: Opensans-Regular;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+}
+
+.task-content-wrp {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.ind-task-head {
+    font-family: Opensans-SemiBold;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-bottom: 8px;
+}
+
+.ind-task-desc {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.time-remains,
+.ind-task-desc {
+    font-family: Opensans-Regular;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.time-remains {
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+/* view task ends */
+
+/* task status button cont */
+
+.task-status-cnt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.task-count,
+.task-status-btn {
+    font-family: Opensans-Regular;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.task-status-btn {
+    border: 1px solid #ccc;
+    padding: 6px 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    outline: none;
+}
+
+.task-status-btn:focus {
+    outline: none;
+}
+
+.task-list {
+    min-height: 100px;
+    max-height: 240px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.btn-clicked {
+    border-color: rgb(50, 205, 50);
+    color: rgb(50, 205, 50);
+}
+
+.completed {
+    background-color: rgb(50, 205, 50);
+    color: #ffffff;
+}
+
+.delete-icon {
+    position: absolute;
+    right: 8px;
+    top: -8px;
+    visibility: hidden;
+    transform: rotate(90deg);
+    font-family: Opensans-Regular;
+    color: #dddddd;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.task-wrp:hover .delete-icon {
+    visibility: visible;
+}
+
+.completed-wrp .ind-task-head,
+.completed-wrp .ind-task-desc,
+.completed-wrp .time-remains {
+    text-decoration: line-through;
+}
+
+/* task status button cont ends */
+
+.show-warning {
+    color: red;
+    font-family: Opensans-Regular;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+/* finished task */
+
+.finished-task .task-content-wrp,
+.finished-task .task-log,
+.finished-task .time-remains {
+    opacity: 0.3;
+}
+
+.finished-task .task-log {
+    pointer-events: none;
+}
+
+/* custom scroll */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}

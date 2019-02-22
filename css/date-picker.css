@@ -1,0 +1,79 @@
+ /* custom style for datepicker */
+
+ .datepicker .datepicker-switch:hover,
+ .datepicker .prev:hover,
+ .datepicker .next:hover,
+ .datepicker tfoot tr th:hover {
+     background-color: rgba(130, 141, 255, 0.3);
+ }
+
+ .datepicker table tr td.day:hover,
+ .datepicker table tr td.day.focused,
+ .datepicker table tr td span:hover,
+ .datepicker table tr td span.focused,
+ .datepicker table tr td.active:hover,
+ .datepicker table tr td.active:hover:hover,
+ .datepicker table tr td.active.disabled:hover,
+ .datepicker table tr td.active.disabled:hover:hover,
+ .datepicker table tr td.active:active,
+ .datepicker table tr td.active:hover:active,
+ .datepicker table tr td.active.disabled:active,
+ .datepicker table tr td.active.disabled:hover:active,
+ .datepicker table tr td.active.active,
+ .datepicker table tr td.active:hover.active,
+ .datepicker table tr td.active.disabled.active,
+ .datepicker table tr td.active.disabled:hover.active,
+ .datepicker table tr td.active.disabled,
+ .datepicker table tr td.active:hover.disabled,
+ .datepicker table tr td.active.disabled.disabled,
+ .datepicker table tr td.active.disabled:hover.disabled,
+ .datepicker table tr td.active[disabled],
+ .datepicker table tr td.active:hover[disabled],
+ .datepicker table tr td.active.disabled[disabled],
+ .datepicker table tr td.active.disabled:hover[disabled],
+ .datepicker table tr td.today,
+ .datepicker table tr td.today:hover,
+ .datepicker table tr td.today.disabled,
+ .datepicker table tr td.today.disabled:hover {
+     background-image: linear-gradient(359deg, #5e00ff, #5f98ec);
+     color: #ffffff;
+     text-align: center;
+ }
+
+ .dow,
+ .datepicker-switch {
+     font-family: Raleway-SemiBold;
+     margin-bottom: 24px;
+     font-size: 15px;
+     color: #3c4558;
+ }
+
+ .dow {
+     font-size: 13px;
+ }
+
+ .datepicker.dropdown-menu th,
+ .datepicker.datepicker-inline th,
+ .datepicker.dropdown-menu td,
+ .datepicker.datepicker-inline td {
+     padding: 5px;
+ }
+
+ .datepicker table tr td span.disabled,
+ .datepicker table tr td span.disabled:hover,
+ .datepicker table tr td.disabled,
+ .datepicker table tr td.disabled:hover {
+     color: #9b9b9b;
+     text-align: center;
+ }
+
+ .day {
+     font-family: OpenSans-Regular;
+     font-size: 12px;
+     /* color: #3c4558; */
+ }
+
+ .datepicker td,
+ .datepicker th {
+     width: 30px;
+ }
