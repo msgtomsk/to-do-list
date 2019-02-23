@@ -117,8 +117,12 @@ function filterTask(arg, cat) {
     var count = 0;
     alltask.forEach(function (ele) {
         if (arg == "all") {
-            addNode(ele);
-            count++;
+            if ((ele.dataset.category.toUpperCase() == cat.toUpperCase()) || cat.toUpperCase() == "ALL") {
+                addNode(ele);
+                count++;
+            } else {
+                removeNode(ele);
+            }
         } else {
             if ((ele.dataset[arg] == "true") && ((ele.dataset.category.toUpperCase() == cat.toUpperCase()) || cat.toUpperCase() == "ALL")) {
                 if (ele.classList.contains('finished-task')) {
@@ -147,8 +151,13 @@ function searchFilter() {
         var ctg = ele.dataset.category;
         if (text.match(regex)) {
             if (clickedbtn == "All") {
-                addNode(ele);
-                count++;
+                if (tempSelected.toUpperCase() == "ALL" || (ctg.toUpperCase() == tempSelected.toUpperCase())) {
+                    addNode(ele);
+                    count++;
+                } else {
+                    removeNode(ele);
+                }
+
             } else if (clickedbtn == "Completed") {
                 if ((ctg.toUpperCase() == tempSelected.toUpperCase() || tempSelected == "all") && ele.dataset.completed == "true") {
                     addNode(ele);
@@ -385,6 +394,7 @@ function createTask() {
     addListenerForSingleElement(inner);
 
     var taskObj = {}
+    taskObj.id = id;
     taskObj.name = taskName;
     taskObj.desc = taskDesc;
     taskObj.category = checkedVal;
@@ -424,7 +434,11 @@ function getValueFromStorage() {
 }
 
 function deleteFromLocalStorage(id) {
-    tasks.splice(id, 1);
+    tasks.forEach(function (task, ind) {
+        if (task.id == id) {
+            tasks.splice(ind, 1);
+        }
+    });
     storeToLocalStorage(tasks);
 }
 
@@ -432,8 +446,3 @@ function updateData(id, status) {
     tasks[id].completed = status;
     storeToLocalStorage(tasks);
 }
-
-
-
-
-
